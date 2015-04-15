@@ -1,4 +1,4 @@
-create database changeme;
-create user 'changeme'@'localhost' identified by 'changeme';
-grant all on changeme.* to 'changeme'@'localhost';
+create database sportsPoint;
+create user 'sportsPoint'@'localhost' identified by 'sportsPoint';
+grant all on changeme.* to 'sportsPoint'@'localhost';
 
