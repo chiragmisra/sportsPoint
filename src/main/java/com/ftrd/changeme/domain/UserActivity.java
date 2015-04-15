@@ -18,29 +18,36 @@ public class UserActivity implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int userActivityId;
  
-	@Column(name="User_Name")
-	private String userName;
-	
 	@ManyToOne
 	@JoinColumn(name="User_Id")
 	private User user;
 	
     @ManyToOne
 	@JoinColumn(name="Activity_Id")
-	private Activity Activity_Id ;
+	private Activity activity ;
+    
+    @Column(name="User_Activity_Unit")
+	private double distance;
 	
 	@Column(name="Points")
 	private int points;
 	
 	@Column(name="Activity_Timestamp")
 	private Timestamp timeStamp;	
+	
 
-	public Activity getActivity_Id() {
-		return Activity_Id;
+//	public UserActivity(User user, Activity activity, double distance) {
+//		this.user = user;
+//		activity = activity;
+//		this.distance = distance;
+//	}
+
+	public Activity getActivity() {
+		return activity;
 	}
 
-	public void setActivity_Id(Activity activity_Id) {
-		Activity_Id = activity_Id;
+	public void setActivity(Activity activity) {
+		activity = activity;
 	}
 
 	public int getUserActivityId() {
@@ -51,13 +58,6 @@ public class UserActivity implements Serializable {
 		this.userActivityId = userActivityId;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
 
 	public User getUser() {
 		return user;
@@ -82,6 +82,15 @@ public class UserActivity implements Serializable {
 	public void setTimeStamp(Timestamp timeStamp) {
 		this.timeStamp = timeStamp;
 	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
+	
 	
 
 

@@ -18,7 +18,7 @@ public class Activity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int Activity_Id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
@@ -36,11 +36,11 @@ public class Activity implements Serializable {
 	@Column(name="Equipment")
 	private boolean Equipment;
 	
-	public int getActivity_Id() {
-		return Activity_Id;
+	public int getId() {
+		return id;
 	}
-	public void setActivity_Id(int activity_Id) {
-		Activity_Id = activity_Id;
+	public void setId(int id) {
+		id = id;
 	}
 	public User getUser() {
 		return user;
