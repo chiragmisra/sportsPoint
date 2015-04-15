@@ -25,9 +25,9 @@ public class UserActivity implements Serializable {
 	@JoinColumn(name="User_Id")
 	private User user;
 	
-//	@ManyToMany
-//	@JoinColumn(name="Activity_Id")
-	//private Activity Activity_Id ;
+    @ManyToOne
+	@JoinColumn(name="Activity_Id")
+	private Activity Activity_Id ;
 	
 	@Column(name="Points")
 	private int points;
