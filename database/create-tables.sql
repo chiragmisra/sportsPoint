@@ -1,9 +1,9 @@
 use sportsPoint;
 
-DROP TABLE Point;
-DROP TABLE User_Activity;
-DROP TABLE Activity;
-DROP TABLE User;
+DROP TABLE IF EXISTS `Point`;
+DROP TABLE IF EXISTS `User_Activity`;
+DROP TABLE IF EXISTS `Activity`;
+DROP TABLE IF EXISTS `User`;
 
 CREATE TABLE User
 (
