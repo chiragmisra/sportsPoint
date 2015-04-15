@@ -18,7 +18,7 @@ public class Point implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int Point_Id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
@@ -26,17 +26,17 @@ public class Point implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name="Activity_Id")
-	private Activity Activity_Id ;
+	private Activity activity ;
 	
 	@Column(name="Total_Points")
 	private int Total_Points;
 
-	public int getPoint_Id() {
-		return Point_Id;
+	public int getId() {
+		return id;
 	}
 
-	public void setPoint_Id(int point_Id) {
-		Point_Id = point_Id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public User getUser() {
@@ -47,12 +47,12 @@ public class Point implements Serializable {
 		this.user = user;
 	}
 
-	public Activity getActivity_Id() {
-		return Activity_Id;
+	public Activity getActivity() {
+		return activity;
 	}
 
-	public void setActivity_Id(Activity activity_Id) {
-		Activity_Id = activity_Id;
+	public void setActivity_Id(Activity activity) {
+		this.activity = activity;
 	}
 
 	public int getTotal_Points() {
