@@ -2,6 +2,7 @@ package com.ftrd.changeme.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,10 +24,18 @@ public class Activity implements Serializable {
 	@JoinColumn(name="user_id")
 	private User user;
 	
+	@Column(name="Activity_Name")
 	private String Activity_Name;
+	
+	@Column(name="Complexity")
 	private int Complexity;
+	
+	@Column(name="Units")
 	private double Units;
+	
+	@Column(name="Equipment")
 	private boolean Equipment;
+	
 	public int getActivity_Id() {
 		return Activity_Id;
 	}

@@ -10,13 +10,13 @@ import java.sql.Timestamp;
  * 
  */
 @Entity
-@Table(name="user")
+@Table(name="User_Activity")
 public class UserActivity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int userActivityId;
  
 	@Column(name="User_Name")
 	private String userName;
@@ -33,16 +33,22 @@ public class UserActivity implements Serializable {
 	private int points;
 	
 	@Column(name="Activity_Timestamp")
-	private Timestamp timeStamp;
+	private Timestamp timeStamp;	
 
-	
-	
-	public int getId() {
-		return id;
+	public Activity getActivity_Id() {
+		return Activity_Id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setActivity_Id(Activity activity_Id) {
+		Activity_Id = activity_Id;
+	}
+
+	public int getUserActivityId() {
+		return userActivityId;
+	}
+
+	public void setUserActivityId(int userActivityId) {
+		this.userActivityId = userActivityId;
 	}
 
 	public String getUserName() {
