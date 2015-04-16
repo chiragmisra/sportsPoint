@@ -8,6 +8,6 @@
 	
 	<import resource="classpath:infrastructure.xml" />
 	
-    <jpa:repositories base-package="com.ftrd.changeme.backend" />
+    <jpa:repositories base-package="com.ftrd.changeme.repository" />
 	
 </beans>

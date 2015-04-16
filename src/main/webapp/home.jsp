@@ -1,3 +1,3 @@
-<!--<jsp:forward page="index.html"></jsp:forward> -->
+<jsp:forward page="index.html"></jsp:forward>
 
 hi
