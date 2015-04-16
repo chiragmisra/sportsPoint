@@ -1,6 +1,7 @@
 package com.ftrd.changeme.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ftrd.changeme.domain.Activity;
 import com.ftrd.changeme.domain.Point;
@@ -11,6 +12,7 @@ import com.ftrd.changeme.repository.PointRepository;
 import com.ftrd.changeme.repository.UserActivityRepository;
 import com.ftrd.changeme.repository.UserRepository;
 
+@Service
 public class UserActivityManagerImpl implements UserActivityManager {
 	
 	@Autowired

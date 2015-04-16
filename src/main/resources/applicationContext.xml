@@ -18,6 +18,19 @@
 	<import resource="classpath:repository-context.xml" />
 	
 	
+	<bean id="sportsPoint" class="com.ftrd.changeme.front.HomeController">
+	</bean>
+	
+
+
+
+
+	<jaxrs:server id="jaxrsRestService" address="/"
+		beanNames="sportsPointRestAPI">
+		<jaxrs:providers>
+			<bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+		</jaxrs:providers>
+	</jaxrs:server>
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="classpath:messages" />
